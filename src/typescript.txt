@@ -1,0 +1,33 @@
+// TIPOS PRIMITIVOS DE VARIAVEIS:
+let valor: number = 3000;
+let nome: string = "";
+let isPago: boolean = false;
+let qualquer: any = "";
+qualquer = 22;
+
+// ARRAYS
+const lista: number[] = []
+lista.push(12, 12, 7)
+
+// TIPOS PERSONALIZADOS (TYPE ALIAS)
+type Trasacao = {
+    tipoTransacao: string;
+    data: Date;
+    valor: Number;
+}
+
+
+// Enum (Valores fixos)
+enum tipoTransacao {
+    DEPOSITO = "Depósito",
+    TRANSFERENCIA = "Transferência",
+    PAGAMENTO_BOLETO = "Pagamento de boleto"
+}
+
+const novaTrasacão: Trasacao = {
+    tipoTransacao: tipoTransacao.DEPOSITO,
+    data: new Date(),
+    valor: 0
+}
+
+console.log(novaTrasacão)

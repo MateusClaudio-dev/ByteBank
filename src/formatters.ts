@@ -18,7 +18,7 @@ function formatarData(data: Date, formato: FormatoData = FormatoData.PADRAO): st
 
 }
 
-function formatarExtrato(valor: number, data: Date, formatoData: FormatoData ): string {
+function formatarInformacoes(valor: number, data: Date, formatoData: FormatoData ): string {
     const dataFormatada = formatarData(data, formatoData);
     const valorFormatado = formatarMoeda(valor)
     return `${dataFormatada} - ${valorFormatado}`;

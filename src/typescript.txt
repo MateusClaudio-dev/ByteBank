@@ -9,7 +9,7 @@ qualquer = 22;
 const lista: number[] = []
 lista.push(12, 12, 7)
 
-// TIPOS PERSONALIZADOS (TYPE ALIAS)
+// TIPOS PERSONALIZADOS (TYPE ALIAS): Um type, por outro lado, é mais flexível e é usado para definir estruturas de dados mais complexas, como objetos com propriedades específicas.
 type Trasacao = {
     tipoTransacao: string;
     data: Date;
@@ -17,7 +17,8 @@ type Trasacao = {
 }
 
 
-// Enum (Valores fixos)
+// Enum (Valores fixos):Um enum é usado quando você quer definir um conjunto de valores nomeados e constantes.
+
 enum tipoTransacao {
     DEPOSITO = "Depósito",
     TRANSFERENCIA = "Transferência",

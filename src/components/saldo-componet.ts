@@ -1,4 +1,8 @@
-let saldo: number = 3000;
+import { FormatoData } from "../types/FormatoData.js";
+import { formatarMoeda, formatarData } from "../utils/formatters.js";
+
+
+export let saldo: number = 3000;
 
 const elementoDataAcesso = document.querySelector(".block-saldo time") as HTMLElement;
 const elementoSaldo = document.querySelector(".saldo-valor .valor") as HTMLElement;

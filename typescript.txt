@@ -32,3 +32,12 @@ const novaTrasacão: Trasacao = {
 }
 
 console.log(novaTrasacão)
+
+---------------------------------------------------------------------------------------
+
+Arquitetura da aplicação TypeScript para preparar a implementação dos módulos ES6.
+
+1 - Pasta "components" - contém os arquivos que interagem com a interface (nova-transacao-component.ts e saldo-component.ts)
+2 - Pasta "utils" - armazena funções auxiliares (formatters.ts)
+3 - Pasta "types" - guarda os tipos da aplicação (FormatoData.ts, TipoTransacao.ts e Transacao.ts)
+4 - arquivo "main.ts" na pasta "src". Esse arquivo funciona como ponto central da aplicação, responsável por centralizar todas as importações necessárias.

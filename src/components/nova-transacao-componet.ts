@@ -1,3 +1,8 @@
+import { TipoTransacao } from "../types/tipoTransacao.js";
+import { formatarMoeda } from "../utils/formatters.js";
+import { Transacao } from "../types/transacao.js";
+import { saldo } from "../components/saldo-componet.js"
+
 const elementoFormulario = document.querySelector(".block-nova-transacao form") as HTMLFormElement;
 elementoFormulario.addEventListener("submit", function(event) {
     event.preventDefault();

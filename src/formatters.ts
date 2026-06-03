@@ -17,3 +17,9 @@ function formatarData(data: Date, formato: FormatoData = FormatoData.PADRAO): st
     return data.toLocaleDateString("pt-br");
 
 }
+
+function formatarExtrato(valor: number, data: Date, formatoData: FormatoData ): string {
+    const dataFormatada = formatarData(data, formatoData);
+    const valorFormatado = formatarMoeda(valor)
+    return `${dataFormatada} - ${valorFormatado}`;
+}

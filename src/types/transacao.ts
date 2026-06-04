@@ -2,6 +2,6 @@ import { TipoTransacao } from "./tipoTransacao.js";
 
 export type Transacao = {
     tipoTransacao: TipoTransacao;
-    valor: Number
+    valor: number
     data: Date
 }

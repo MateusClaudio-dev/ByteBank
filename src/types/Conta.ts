@@ -2,15 +2,26 @@ import { Transacao } from "./transacao.js";
 import { TipoTransacao } from "./tipoTransacao.js";
 import { GrupoTransacao } from "./GrupoTransacao.js";
 
-let saldo: number = JSON.parse(localStorage.getItem("saldo") || "0"); // colocar o '0' fora do parse 
-const transacoes: Transacao[] = JSON.parse(localStorage.getItem("transacoes") || "[]", // Se for null, vira "[]"
-    (key: string, value: string) => {                                         // colocar o array fora do parse 
-        if (key == "data") {
-            return new Date(value);
-        }
-        return value;
+// * ALURA
+let saldo: number =JSON.parse(localStorage.getItem("saldo")) || 0;
+const transacoes:Transacao[] =JSON.parse(localStorage.getItem("transacoes"), (key: string, value: string) => {
+if (key === "data") {
+return new Date(value);
     }
-);
+
+return value;
+}) || [];
+
+//* IA 
+// let saldo: number = JSON.parse(localStorage.getItem("saldo") || "0"); // colocar o '0' fora do parse 
+// const transacoes: Transacao[] = JSON.parse(localStorage.getItem("transacoes") || "[]", // Se for null, vira "[]"
+//     (key: string, value: string) => {                                         // colocar o array fora do parse 
+//         if (key == "data") {
+//             return new Date(value);
+//         }
+//         return value;
+//     }
+// );
 
 function debitar(valor: number): void {
     if (valor <= 0) {
@@ -70,6 +81,7 @@ const Conta = {
         } 
         else if (novaTransacao.tipoTransacao == TipoTransacao.TRANSFERENCIA || novaTransacao.tipoTransacao == TipoTransacao.PAGAMENTO_BOLETO) {
             debitar(novaTransacao.valor)
+            novaTransacao.valor = *= -1;
         } 
         else {
             throw new Error("Tipo de Transação é inválido!");

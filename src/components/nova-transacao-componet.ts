@@ -41,7 +41,7 @@ elementoFormulario.addEventListener("submit", function(event) {
         if (erro instanceof Error) {
             alert(erro.message)
         } else {
-            alert('Ocorreu u, erro deaconhecido')
+            alert('Ocorreu um erro deaconhecido')
         }
     }
 });

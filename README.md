@@ -14,7 +14,6 @@ Este projeto foi desenvolvido como parte do aprendizado em TypeScript, focando n
 
 ---
 ## 🛠️ Tecnologias Utilizadas
-**HTML5 & CSS3** - Estrutura e estilização da interface gráfica.
 
 **TypeScript** - Superset do JavaScript que adiciona tipagem estática e recursos modernos ao desenvolvimento.
 

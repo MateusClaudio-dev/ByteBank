@@ -21,8 +21,8 @@ elementoFormulario.addEventListener("submit", function(event) {
 
         let tipoTransacao: TipoTransacao = inputTipoTransacao.value as TipoTransacao;
         let valor: number = inputValor.valueAsNumber;
-        let data: Date = new Date(inputData.value + "00:00:00");
-        let saldo: number = Conta.GetSaldo();
+        let data: Date = new Date(inputData.value + " 00:00:00");
+        let saldo: number = Conta.getSaldo();
 
 
         const novaTransacao: Transacao = {

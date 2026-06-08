@@ -3,7 +3,7 @@ import { FormatoData } from "../types/FormatoData.js";
 import { GrupoTransacao } from "../types/GrupoTransacao.js";
 import { formatarMoeda, formatarData } from "../utils/formatters.js";
 
-const elementoRegistroTransacoesExtrato: HTMLElement = document.querySelector(".extrato .registro-transacoes");
+const elementoRegistroTransacoesExtrato: HTMLElement = document.querySelector(".extrato .registro-transacoes") as HTMLElement;
 
 renderizarExtrato();
 function renderizarExtrato(): void {

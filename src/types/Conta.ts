@@ -2,8 +2,8 @@ import { Transacao } from "./transacao.js";
 import { TipoTransacao } from "./tipoTransacao.js";
 import { GrupoTransacao } from "./GrupoTransacao.js";
 
-let saldo: number = JSON.parse(localStorage.getItem("saldo")) || 0;
-const transacoes: Transacao[] = JSON.parse(localStorage.getItem("transacoes"), (key: string, value: string) => {
+let saldo: number = JSON.parse(localStorage.getItem("saldo") || "0");
+const transacoes: Transacao[] = JSON.parse(localStorage.getItem("transacoes") || "[]", (key: string, value: string) => {
     if (key === "data") {
         return new Date(value);
     }
@@ -56,7 +56,11 @@ const Conta = {
                     transacoes: []
                 });
             }
-            gruposTransacoes.at(-1).transacoes.push(transacao);
+            const ultimoGrupo = gruposTransacoes[gruposTransacoes.length - 1];
+            if (ultimoGrupo) {
+                ultimoGrupo.transacoes.push(transacao)
+            }
+            //gruposTransacoes.at(-1).transacoes.push(transacao);
         }
 
         return gruposTransacoes;
